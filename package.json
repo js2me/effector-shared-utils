@@ -1,0 +1,68 @@
+{
+  "name": "effector-shared-utils",
+  "version": "0.0.1",
+  "files": [
+    "*"
+  ],
+  "exports": {
+    "counter-model": "./counter-model/index.js",
+    "socket-model": "./socket-model/index.js",
+    "timer-model": "./timer-model/index.js",
+    "value-model": "./value-model/index.js",
+    "view-model": "./view-model/index.js",
+    "window-model": "./window-model/index.js",
+    "always.ts": "./always.js",
+    "cached-store.ts": "./cached-store.js",
+    "create-local-event.ts": "./create-local-event.js",
+    "empty-array.ts": "./empty-array.js",
+    "equal.ts": "./equal.js",
+    "protect-event.ts": "./protect-event.js",
+    "sync-with-html-attribute.ts": "./sync-with-html-attribute.js",
+    "when.ts": "./when.js"
+  },
+  "scripts": {
+    "prebuild": "rimraf dist & eslint . --fix",
+    "build": "tsc",
+    "prepub": "pnpm run build & copy package.json dist",
+    "pub": "cd dist & npm publish",
+    "postpub": "cd dist & del package.json"
+  },
+  "keywords": [],
+  "author": "js2me",
+  "license": "MIT",
+  "description": "",
+  "bugs": {
+    "url": "https://github.com/js2me/effector-shared-utils/issues"
+  },
+  "homepage": "https://github.com/js2me/effector-shared-utils",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/js2me/effector-shared-utils"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "atomic-router": "*",
+    "patronum": "*",
+    "react": "*",
+    "effector": "*",
+    "@types/lodash-es": "*",
+    "@types/react": "*",
+    "lodash-es": "*",
+    "yammies": "*"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.5",
+    "@typescript-eslint/eslint-plugin": "7.13.1",
+    "@typescript-eslint/parser": "7.13.1",
+    "eslint": "8.57.0",
+    "eslint-config-prettier": "9.1.0",
+    "eslint-import-resolver-alias": "1.1.2",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-prettier": "5.1.3",
+    "prettier": "3.3.2",
+    "rimraf": "6.0.1",
+    "typescript": "5.4.5"
+  },
+  "packageManager": "pnpm@9.5.0+sha512.140036830124618d624a2187b50d04289d5a087f326c9edfc0ccd733d76c4f52c3a313d4fc148794a2a9d81553016004e6742e8cf850670268a7387fc220c903"
+}
