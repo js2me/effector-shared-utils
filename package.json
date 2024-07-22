@@ -31,14 +31,6 @@
   "author": "js2me",
   "license": "MIT",
   "description": "",
-  "bugs": {
-    "url": "https://github.com/js2me/effector-shared-utils/issues"
-  },
-  "homepage": "https://github.com/js2me/effector-shared-utils",
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/js2me/effector-shared-utils"
-  },
   "dependencies": {},
   "peerDependencies": {
     "atomic-router": "*",
