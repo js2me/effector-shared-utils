@@ -4,28 +4,12 @@
   "files": [
     "*"
   ],
-  "exports": {
-    "./counter-model": "./counter-model/index.js",
-    "./socket-model": "./socket-model/index.js",
-    "./timer-model": "./timer-model/index.js",
-    "./value-model": "./value-model/index.js",
-    "./view-model": "./view-model/index.js",
-    "./window-model": "./window-model/index.js",
-    "./always": "./always.js",
-    "./cached-store": "./cached-store.js",
-    "./create-local-event": "./create-local-event.js",
-    "./empty-array": "./empty-array.js",
-    "./equal": "./equal.js",
-    "./protect-event": "./protect-event.js",
-    "./sync-with-html-attribute": "./sync-with-html-attribute.js",
-    "./when": "./when.js"
-  },
   "scripts": {
     "prebuild": "rimraf dist & eslint . --fix",
     "build": "tsc",
-    "prepub": "pnpm run build & copy package.json dist",
+    "prepub": "pnpm run build & copy package.json dist & copy README.md dist & copy LICENSE dist",
     "pub": "cd dist & npm publish",
-    "postpub": "cd dist & del package.json"
+    "postpub": "rimraf dist"
   },
   "keywords": [],
   "author": "js2me",
